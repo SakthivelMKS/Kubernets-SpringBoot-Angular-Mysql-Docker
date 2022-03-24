@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="studentController.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+
+<div class="container">
+
+<h3 class="text-center">Student Updation</h3>
+
+<form novalidate ng-init="loadData()">
+<div class="row">
+  <div class="col-md-6">Name*:
+    <input type="text" ng-model="StudentEdit.student_name" required></div>
+  <div class="col-md-6">Branch*:
+  <select ng-model="StudentEdit.student_branch" ng-options="x for x in names" required>
+</select>
+</div>
+</div><br>
+    
+	<div class="row">
+  <div class="col-md-6">Age*:
+    <input type="text" ng-model="StudentEdit.student_age" required></div>
+  <div class="col-md-6">Ph No*:
+    <input type="text" ng-model="StudentEdit.student_phno_number" required></div>
+</div><br>
+    
+	<div class="row">
+  <div class="col-md-6">E-mail*:
+    <input type="text" ng-model="StudentEdit.student_email"></div>
+  <div class="col-md-6">Address*:
+  <textarea ng-model="StudentEdit.address" required></textarea>
+    </div>
+</div><br>
+    
+    
+    
+    <button ng-click="">RESET</button>
+	<button class="btn btn-success" ng-click="updateStudent(StudentEdit)">&#9998; Submit</button></div>
+  </form>
+
+<br>
+
+</div>
+
+<
+
+</body>
+</html>
